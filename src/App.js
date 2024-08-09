@@ -2,6 +2,7 @@ import React from "react";
 import GlobalStyle from "./components/GlobalStyle";
 import styled from "styled-components";
 import { MOLE, MOLE_LENGTH } from "./constans";
+import Mole from "./components/Mole";
 
 const StyledApp = styled.div`
   padding: 1em;
@@ -56,7 +57,9 @@ const App = () => {
           {moles.map((mole, i) => (
             <div className="cell" key={i}>
               <div className="hole-mask">
-                <div className="hole"></div>
+                <div className="hole">
+                  <Mole className="mole" mole={mole} />
+                </div>
               </div>
             </div>
           ))}
